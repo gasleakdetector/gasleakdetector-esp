@@ -26,13 +26,18 @@ jobs:
           arduino-cli lib install "ArduinoJson"
           arduino-cli lib install "ESP8266 and ESP32 OLED driver for SSD1306 displays"
 
+      - name: Prepare sketch folder
+        run: |
+          mkdir -p sketch/GASLEAKDETECTOR
+          cp src/* sketch/GASLEAKDETECTOR/
+
       - name: Compile firmware
         run: |
           arduino-cli compile \
             --fqbn esp8266:esp8266:nodemcuv2 \
             --additional-urls https://arduino.esp8266.com/stable/package_esp8266com_index.json \
             --output-dir build/ \
-            src/GASLEAKDETECTOR.ino
+            sketch/GASLEAKDETECTOR
 
       - name: Upload .bin artifact
         uses: actions/upload-artifact@v4
