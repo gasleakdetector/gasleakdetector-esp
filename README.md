@@ -92,7 +92,7 @@ src/
 | NodeMCU 1.0 ESP8266 ESP-12E | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-nodemcu-esp8266-esp-12e.html) |
 | MQ-6 LPG Gas Sensor Module | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-mq-6-gas-sensor-module.html) |
 | OLED SSD1306 0.96" I2C | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-oled-ssd1306-0.96-i2c.html) |
-| Active Buzzer 5V | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-active-buzzer-5v-arduino.html) |
+| Active Buzzer 3V | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-active-buzzer-3v-arduino.html) |
 
 > Links point to AliExpress search results — filter by **Orders** to find the most popular listings.
 
