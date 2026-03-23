@@ -1,0 +1,47 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Arduino CLI
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
+          echo "$HOME/bin" >> $GITHUB_PATH
+
+      - name: Configure Arduino CLI
+        run: |
+          arduino-cli config init
+          arduino-cli config add board_manager.additional_urls https://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+      - name: Install ESP8266 core
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install esp8266:esp8266
+
+      - name: Install libraries
+        run: |
+          arduino-cli lib install "ArduinoJson"
+          arduino-cli lib install "ESP8266 and ESP32 OLED driver for SSD1306 displays"
+
+      - name: Compile firmware
+        run: |
+          arduino-cli compile \
+            --fqbn esp8266:esp8266:nodemcuv2 \
+            --output-dir build/ \
+            src/GASLEAKDETECTOR.ino
+
+      - name: Upload .bin artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-bin
+          path: build/*.bin
