@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/github/license/${REPO}?color=04A8F4&style=flat-square"/>
+  <img alt="License" src="https://img.shields.io/github/license/gasleakdetector/gasleakdetector-esp?color=04A8F4&style=flat-square"/>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-04A8F4?style=flat-square"/>
-  <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/${REPO}/build.yml?style=flat-square&color=04A8F4"/>
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/${REPO}?color=04A8F4&style=flat-square"/>
+  <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/gasleakdetector/gasleakdetector-esp/build.yml?style=flat-square&color=04A8F4"/>
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/gasleakdetector/gasleakdetector-esp?color=04A8F4&style=flat-square"/>
 </p>
 
 <div align="center">    
@@ -85,7 +85,7 @@ src/
 | + | D5 / GPIO14 |
 | − | GND |
 
-### Product Links. 
+### Product Links
 
 | Component | AliExpress |
 |-----------|-----------|
@@ -93,6 +93,8 @@ src/
 | MQ-6 LPG Gas Sensor Module | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-mq-6-gas-sensor-module.html) |
 | OLED SSD1306 0.96" I2C | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-oled-ssd1306-0.96-i2c.html) |
 | Active Buzzer 5V | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-active-buzzer-5v-arduino.html) |
+
+> Links point to AliExpress search results — filter by **Orders** to find the most popular listings.
 
 ---
 
