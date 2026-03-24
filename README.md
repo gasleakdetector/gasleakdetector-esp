@@ -21,9 +21,9 @@
   <p>
     Part of the <b>Gas Leak Detector</b> ecosystem:
     <br/>
-    <a href="https://github.com/${REPO_ORG}/gasleakdetector-server">Server</a> •
-    <a href="https://github.com/${REPO_ORG}/gasleakdetector-esp">ESP8266 Firmware</a> •
-    <a href="https://github.com/${REPO_ORG}/gasleakdetector">Android App</a>
+		<a href="https://github.com/gasleakdetector/gasleakdetector-server">Server</a> •
+		<a href="https://github.com/gasleakdetector/gasleakdetector-esp">ESP8266 Firmware</a> •
+		<a href="https://github.com/gasleakdetector/gasleakdetector">Android App</a>
   </p>
 </div>
 
