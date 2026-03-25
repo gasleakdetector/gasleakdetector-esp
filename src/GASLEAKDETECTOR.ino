@@ -69,6 +69,7 @@ static void updateBuzzer(int ppm) {
 
 static void enqueueIfSlow(int ppm) {
   static unsigned long busyStartMs = 0;
+  if (!httpsClient.isBusy()) { busyStartMs = 0; return; }
   if (busyStartMs == 0) busyStartMs = millis();
   if (millis() - busyStartMs > 2000) {
     httpsClient.enqueue(ppm);
@@ -147,10 +148,13 @@ void loop() {
       millis() - lastDataSend >= (unsigned long)params.sendInterval) {
     lastDataSend = millis();
     if (!httpsClient.isBusy()) {
-      if (httpsClient.queuedCount() > 0) {
+      static int drainCount = 0;
+      if (httpsClient.queuedCount() > 0 && drainCount < 5) {
         httpsClient.drainOne();
+        drainCount++;
         Serial.printf("[DRAIN] queue=%d\n", httpsClient.queuedCount());
       } else {
+        drainCount = 0;
         httpsClient.sendSingle(latestPPM);
         Serial.printf("[SEND] ppm=%d\n", latestPPM);
       }
@@ -159,7 +163,7 @@ void loop() {
     }
   }
 
-  if (currentState != STATE_CONNECTED &&
+  if (currentState == STATE_CONN_FAILED &&
       millis() - lastDataSend >= (unsigned long)params.sendInterval) {
     lastDataSend = millis();
     httpsClient.enqueue(latestPPM);
