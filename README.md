@@ -4,7 +4,7 @@
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/github/license/gasleakdetector/gasleakdetector-esp?color=04A8F4&style=flat-square"/>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0-04A8F4?style=flat-square"/>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-04A8F4?style=flat-square"/>
   <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/gasleakdetector/gasleakdetector-esp/build.yml?style=flat-square&color=04A8F4"/>
   <img alt="Last commit" src="https://img.shields.io/github/last-commit/gasleakdetector/gasleakdetector-esp?color=04A8F4&style=flat-square"/>
 </p>
