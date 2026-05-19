@@ -9,7 +9,7 @@
 #include <ArduinoJson.h>
 
 #define DEVICE_ID        "ESP_GASLEAK_01"
-#define FIRMWARE_VERSION "1.0.0"
+#define FIRMWARE_VERSION "1.0.1"
 
 static const int PIN_LED    = 2;
 static const int PIN_SENSOR = A0;
