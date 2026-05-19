@@ -104,7 +104,7 @@ static bool initOLED() {
 
 void setup() {
   Serial.begin(57600);
-  Serial.println(F("\n[BOOT] Gas Leak Detector v1.0"));
+  Serial.println(F("\n[BOOT] Gas Leak Detector v" FIRMWARE_VERSION));
   
   ESP.wdtEnable(5000);
   
