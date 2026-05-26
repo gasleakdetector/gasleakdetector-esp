@@ -10,7 +10,7 @@
 </p>
 
 <div align="center">    
-  <h1>Gas Leak Detector — ESP8266 Firmware</h1>
+  <h1>Gas Leak Detector - ESP8266 Firmware</h1>
 
   <p>
     Arduino firmware for the NodeMCU ESP-12E (ESP8266).<br/>
@@ -30,7 +30,7 @@
 ---
 
 > ⚠️ This repository contains the ESP8266 firmware only.  
-> No pre-flashed modules are provided — compilation and flashing are your responsibility.
+> No pre-flashed modules are provided - compilation and flashing are your responsibility.
 
 ## Quick Setup
 
@@ -45,7 +45,7 @@
 
 ```
 src/
-  GASLEAKDETECTOR.ino    Main sketch — setup(), loop(), OLED draw, buzzer logic
+  GASLEAKDETECTOR.ino    Main sketch - setup(), loop(), OLED draw, buzzer logic
   Config.h               Pin definitions, timing constants, DeviceConfig struct
   WiFiManager.h          AP mode, captive portal web UI, EEPROM config persistence
   StateManager.h         FSM states, LED blink patterns per state
@@ -94,7 +94,7 @@ src/
 | OLED SSD1306 0.96" I2C | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-oled-ssd1306-0.96-i2c.html) |
 | Active Buzzer 3V | [Search on AliExpress](https://www.aliexpress.com/w/wholesale-active-buzzer-3v-arduino.html) |
 
-> Links point to AliExpress search results — filter by **Orders** to find the most popular listings.
+> Links point to AliExpress search results - filter by **Orders** to find the most popular listings.
 
 ---
 
@@ -168,10 +168,10 @@ The firmware runs a finite state machine. The built-in LED reflects the current 
 
 | State | LED pattern | Description |
 |-------|-------------|-------------|
-| `STATE_AP_MODE` | Blink 500 ms | No config — captive portal active |
+| `STATE_AP_MODE` | Blink 500 ms | No config - captive portal active |
 | `STATE_CONNECTING` | Blink 200 ms | Attempting Wi-Fi connection |
-| `STATE_CONNECTED` | Solid ON | Connected — sending data |
-| `STATE_CONN_FAILED` | Blink 100 ms | Connection failed — retrying |
+| `STATE_CONNECTED` | Solid ON | Connected - sending data |
+| `STATE_CONN_FAILED` | Blink 100 ms | Connection failed - retrying |
 | `STATE_TEST_MODE` | Blink 150 ms | Hardware test mode |
 
 ---
@@ -203,9 +203,9 @@ When the device loses Wi-Fi, sensor readings are buffered in RAM (up to `MAX_OFF
 
 The SSD1306 OLED is optional. When connected, it shows:
 
-- **Large center text** — current PPM value with animated smoothing (±20 PPM per frame)
-- **Status line** — `Normal` / `Warning` / `DANGER!` derived from the configured thresholds
-- **Bottom line** — `Online` when connected, or `Offline Q:<n>` showing the queue depth
+- **Large center text** - current PPM value with animated smoothing (±20 PPM per frame)
+- **Status line** - `Normal` / `Warning` / `DANGER!` derived from the configured thresholds
+- **Bottom line** - `Online` when connected, or `Offline Q:<n>` showing the queue depth
 
 ---
 
@@ -249,5 +249,5 @@ Apache 2.0 © [Gas Leak Detector](LICENSE)
 
 <p align="center">
   Have questions or ran into issues? Reach out at <a href="mailto:pan2512811@gmail.com">pan2512811@gmail.com</a>.<br/>
-  Found this project useful? Consider giving it a ⭐ — it means a lot and helps others discover it. Thanks!
+  Found this project useful? Consider giving it a ⭐ - it means a lot and helps others discover it. Thanks!
 </p>
